@@ -1,7 +1,13 @@
 close all;
 clearvars;
-f=@(x) 0.5+2*(x-3)^2;
+f=@(x) 0.5+2*(x-3).^2;
 df=@(x) 4*(x-3);
+figure
+plot(0:0.1:6,f(0:0.1:6))
+hold on
+plot(3,f(3),'kx')
+xlabel('$\alpha$',Interpreter='latex')
+ylabel('$f(\alpha$)',Interpreter='latex')
 
 %% Bracketing Algoritm
 alpha0=0; alpha1=1; rho=0.25; sigma=0.5; 
